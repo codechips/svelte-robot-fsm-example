@@ -1,4 +1,8 @@
+dependencies:
+  robot3: 0.2.18
 devDependencies:
+  prettier: 2.1.2
+  prettier-plugin-svelte: 1.4.0_prettier@2.1.2+svelte@3.29.0
   svelte: 3.29.0
   svelte-hmr: 0.11.1_svelte@3.29.0
   svite: 0.8.0-beta.0_svelte-hmr@0.11.1+svelte@3.29.0
@@ -2101,6 +2105,23 @@ packages:
       node: '>=6.0.0'
     resolution:
       integrity: sha512-3QT8bBJeX/S5zKTTjTCIjRF3If4avAT6kqxcASlTWEtAFCb9NH0OUxNDfgZSWdP5fJnBYCMEWkIFfWeugjzYMg==
+  /prettier-plugin-svelte/1.4.0_prettier@2.1.2+svelte@3.29.0:
+    dependencies:
+      prettier: 2.1.2
+      svelte: 3.29.0
+    dev: true
+    peerDependencies:
+      prettier: ^1.16.4 || ^2.0.0
+      svelte: ^3.2.0
+    resolution:
+      integrity: sha512-KXO2He7Kql0Lz4DdlzVli1j2JTDUR9jPV/DqyfnJmY1pCeSV1qZkxgdsyYma35W6OLrCAr/G6yKdmzo+75u2Ng==
+  /prettier/2.1.2:
+    dev: true
+    engines:
+      node: '>=10.13.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
   /proxy-addr/2.0.6:
     dependencies:
       forwarded: 0.1.2
@@ -2242,6 +2263,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
+  /robot3/0.2.18:
+    dev: false
+    resolution:
+      integrity: sha512-0P3HfHVJfPKObpoIciglMefFYhMtdGMRjh5KE5U+NydwrheOnbA3GqlB84Wcy5h6UMseb77MpedUDyKZVIkiug==
   /rollup-plugin-dynamic-import-variables/1.1.0_rollup@2.29.0:
     dependencies:
       '@rollup/pluginutils': 3.1.0_rollup@2.29.0
@@ -2908,6 +2933,9 @@ packages:
     resolution:
       integrity: sha512-faQrqNMzcPCHGVC2aaOINk13K+aaBDUPjGWl0teOXywElLjyVAB6Oe2jj62jHYtwsU49jXhScYbvPENK+6zAvQ==
 specifiers:
+  prettier: ^2.1.2
+  prettier-plugin-svelte: ^1.4.0
+  robot3: ^0.2.18
   svelte: 3.29.0
   svelte-hmr: 0.11.1
   svite: ^0.8.0-beta.0
