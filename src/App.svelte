@@ -5,15 +5,21 @@
 
   // constructor function to interpret the machine and wrap
   // the FSM service into a custom svelte store.
-  export const useMachine = (machine) => {
+  // `event` will be used as initial context if passed
+  export const useMachine = (machine, event = {}) => {
+    // every time the state changes we will update our Svelte store
+    const service = interpret(
+      machine,
+      (service) => {
+        set({ state: service.machine.current, context: service.context });
+      },
+      event
+    );
+
     const { subscribe, set } = writable({
       state: machine.current,
-      context: machine.context,
-    });
-
-    // every time the state changes we will update our Svelte store
-    const service = interpret(machine, (service) => {
-      set({ state: service.machine.current, context: service.context });
+      // we want the service context and not machine context
+      context: service.context,
     });
 
     return [{ subscribe }, service.send];
